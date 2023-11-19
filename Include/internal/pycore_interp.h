@@ -202,8 +202,8 @@ struct type_cache {
 
 /* interpreter state */
 
-#define _PY_NSMALLPOSINTS           257
-#define _PY_NSMALLNEGINTS           5
+#define _PY_NSMALLPOSINTS           2049
+#define _PY_NSMALLNEGINTS           16
 
 // _PyLong_GetZero() and _PyLong_GetOne() must always be available
 #if _PY_NSMALLPOSINTS < 2
