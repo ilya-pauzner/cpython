@@ -301,7 +301,7 @@ def generate_runtime_init(identifiers, strings):
         with printer.block('#define _Py_small_ints_INIT', continuation=True):
             for i in range(-nsmallnegints, nsmallposints):
                 printer.write(f'_PyLong_DIGIT_INIT({i}),')
-                immortal_objects.append(f'(PyObject *)&_Py_SINGLETON(small_ints)[_PY_NSMALLNEGINTS + {i}]')
+                immortal_objects.append(f'(PyObject *)&_Py_SINGLETON(shifted)[{i}]')
         printer.write('')
         with printer.block('#define _Py_bytes_characters_INIT', continuation=True):
             for i in range(256):

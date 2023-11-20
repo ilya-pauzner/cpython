@@ -62,6 +62,7 @@ extern PyTypeObject _PyExc_MemoryError;
         .static_objects = { \
             .singletons = { \
                 .small_ints = _Py_small_ints_INIT, \
+                .shifted = ((PyLongObject*) runtime.static_objects.singletons.small_ints) + _PY_NSMALLNEGINTS, \
                 .bytes_empty = _PyBytes_SIMPLE_INIT(0, 0), \
                 .bytes_characters = _Py_bytes_characters_INIT, \
                 .strings = { \

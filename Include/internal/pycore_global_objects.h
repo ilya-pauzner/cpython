@@ -36,6 +36,7 @@ struct _Py_static_objects {
          * -_PY_NSMALLNEGINTS (inclusive) to _PY_NSMALLPOSINTS (exclusive).
          */
         PyLongObject small_ints[_PY_NSMALLNEGINTS + _PY_NSMALLPOSINTS];
+        const PyLongObject* shifted;
 
         PyBytesObject bytes_empty;
         struct {
